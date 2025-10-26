@@ -1,0 +1,122 @@
+.service-login-page {
+  min-height: 100vh;
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-login-header {
+  background: var(--banorte-red);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.service-login-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.service-login-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-login-logo-container {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.service-login-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.service-login-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.service-login-welcome {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.service-login-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-login-info {
+  background: #E3F2FD;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+}
+
+.service-login-info p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.service-login-info strong {
+  color: #1976D2;
+}
+
+.service-login-forgot {
+  background: none;
+  border: none;
+  color: var(--banorte-red);
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  font-family: var(--font-family);
+}
+
+.service-login-forgot:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.service-login-forgot:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.service-login-footer {
+  margin-top: 30px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.service-login-footer p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
