@@ -12,7 +12,7 @@ type Screen = 'login' | 'dashboard' | 'service-selection' | 'cfe-login' | 'water
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>('login');
-  const [userName] = useState('Eduardo');
+  const [userName] = useState('Jazmín');
   const [authSuccessMessage, setAuthSuccessMessage] = useState('');
 
   const handleLogin = () => {
