@@ -1,0 +1,91 @@
+/* Banorte Design System */
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+:root {
+  /* Primary Colors */
+  --banorte-red: #EB0029;
+  --banorte-red-hover: #DB0026;
+  --banorte-gray: #5B6670;
+  --banorte-white: #FFFFFF;
+
+  /* Additional Colors */
+  --color-links: #EB0029;
+  --color-positive: #6CC04A;
+  --color-alert: #FF671B;
+  --color-warning: #FFA400;
+
+  /* Text Colors */
+  --text-primary: #323E48;
+  --text-secondary: #5B6670;
+  --text-disabled: #C1C5C8;
+  --text-gray: #A2A9AD;
+
+  /* Background Colors */
+  --bg-light: #F6F6F6;
+  --bg-disabled: #CFD2D3;
+  --bg-white: #FFFFFF;
+
+  /* Typography */
+  --font-family: 'Gotham', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Typography Classes */
+.gotham-book-12 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.gotham-book-14 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.gotham-medium-15 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Mobile Phone Simulation */
+@media (min-width: 431px) {
+  body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  #root {
+    margin: 20px;
+    border-radius: 30px;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+}
