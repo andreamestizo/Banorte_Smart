@@ -1,157 +1,145 @@
 # Banorte Smart - Implementación en la App Banorte para el Consumo Inteligente de Agua y Electricidad
 
-A modern mobile banking application that helps Banorte customers analyze their electricity consumption, receive AI-powered recommendations, and manage payments efficiently.
+
+Una aplicación bancaria móvil moderna que ayuda a los clientes de Banorte a analizar su consumo de electricidad y agua, recibir recomendaciones impulsadas por IA, invertir sus ahorros y gestionar pagos de manera eficiente.
+
 
 ---
 
-## Table of Contents
+## Índice
 
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Deployment Guide](#deployment-guide)
-- [Project Structure](#project-structure)
-- [Basic Terminology](#basic-terminology)
-- [Presentation Pitch](#presentation-pitch)
-- [Technology Stack](#technology-stack)
+- [Visión General](#overview)
+- [Funcionalidades](#features)
+- [Primeros pasos](#getting-started)
+- [Estructura del proyecto](#project-structure)
+- [Tecnologías empleadas](#technology-stack)
 
 ---
 
-## Overview
+## Visión General
 
-**Banorte Smart** is an innovative banking application that integrates electricity consumption analysis with AI-powered insights. Users can track their weekly electricity and water usage, identify consumption spikes, receive personalized saving recommendations from Maya (our AI chatbot), and manage their electricity and water bill payments - all within the Banorte ecosystem.
+Banorte Smart es una innovadora aplicación bancaria que integra el análisis del consumo de electricidad y agua con información impulsada por Inteligencia Artificial. Los usuarios pueden monitorear su consumo semanal de electricidad y agua, identificar picos de consumo, recibir recomendaciones personalizadas de ahorro de Maya (nuestro chatbot de IA) y gestionar los pagos de sus recibos de luz y agua; todo dentro del ecosistema Banorte.
+
+
 
 ---
 
-## Features
+## Funcionalidades
 
-###  Authentication
-- Secure login screen with Banorte branding
-- User-friendly interface
+###  Autenticación
+- Pantalla de inicio de sesión segura con la identidad de Banorte.
+- Interfaz amigable e intuitiva
 
 ###  Dashboard
-- Quick access to all banking services
-- Maya AI chatbot integration
+- Acceso rápido a todos los servicios financieros y de consumo.
+- Integración con el chatbot Maya (IA) para consultas rápidas.
 - Menu grid with 6 core services
 
-###  Electricity and Water Consumption Analysis
-- **4 weeks of historical data** with date ranges
-- **Interactive bar charts** showing daily costs
-- **Week selector** to compare different periods
-- **Automatic spike detection** (flags consumption 2x above average)
-- **Savings comparison** vs. previous week
-- **
-- Visual consumption patterns
+###  Análisis de consumo de electricidad y agua
+- Visualización diaria y semanal del consumo de electricidad y agua.
+- 4 semanas de datos históricos con comparación en los periodos más recientes.
+- Gráficos interactivos mostrando costos, consumo en kWh o m^3, y patrones visuales.
+- Selector de semanas para comparar distintos periodos.
+- Detección automática de picos de consumo (2x sobre el promedio).
+- Alertas de ahorro y recomendaciones para optimizar el consumo.
 
 ###  Maya AI Chatbot
-- Powered by **Google Gemini Flash 2.5**
-- Analyzes your electricity consumption data
-- Answers questions like:
-  - "What day did I spend the most?"
-  - "How much did I save this week?"
-  - "Give me recommendations to save energy"
-- Provides personalized energy-saving tips
-- Quick question buttons for common queries
+- Impulsado por **Google Gemini Flash 2.5**
+- Analiza datos de consumo de electricidad y agua.
+- Responde preguntas como:
+  - “¿Qué día gasté más?”
+  - “¿Cuánto ahorré esta semana?”
+  - “Dame recomendaciones para ahorrar energía y agua.”
+- Proporciona consejos prácticos y personalizados.
+- Botones rápidos para consultas frecuentes.
 
-###  Payment Options
-- **Pay in full** - Complete balance payment
-- **Pay in parts** - Split into 3 installments
-- **Defer payment** - Pay later option
-- **Custom amount** - Flexible payment (minimum $50 MXN)
+###  Opciones de pago
+- Pago total – liquidar saldo completo.
+- Pago en partes – dividir en 3 mensualidades.
+- Pago diferido – opción de pagar después.
+- Monto personalizado – pago flexible (mínimo $50 MXN).
+- Pago total de servicios - pago del total de ambos servicios (luz y agua)
+
+### Inversión del ahorro
+- Calcula automáticamente el dinero ahorrado al reducir consumo.
+- Permite invertir ese dinero, transformando el ahorro en oportunidades financieras dentro de la app.
+
+### Crédito para imprevistos
+- Si el usuario gasta el dinero reservado para servicios, puede solicitar un crédito inmediato para electricidad o agua, evitando retrasos en los pagos y protegiendo su historial financiero.
+
+### Vinculación de cuentas y privacidad
+- Al ingresar a “Servicios”, se muestra un pop-up de Términos y Condiciones donde el usuario acepta o rechaza el uso de sus datos.
+- El usuario elige entre Electricidad o Agua y selecciona la cuenta que desea vincular.
+- Simulación de redireccionamiento a los portales oficiales (CFE o Agua y Drenaje de Monterrey) para vincular cuentas.
+Nota: la vinculación completa estará disponible una vez que las instituciones proporcionen sus APIs.
+- Una vez vinculadas, el usuario accede a estadísticas detalladas por día y semana, con alertas de picos altos y notificaciones de ahorro.
 
 ---
 
-##  Getting Started
+##  Primeros pasos
 
-### Prerequisites
+### Pre requisitos
 
-Before you begin, ensure you have the following installed:
+Antes de comenzar, debes tener instalado:
 - **Node.js** (version 16 or higher) - [Download here](https://nodejs.org/)
 - **npm** (comes with Node.js)
 - **Git** - [Download here](https://git-scm.com/)
 - A **Google Gemini API Key** - [Get one here](https://ai.google.dev/)
 
-### Step 1: Download from GitHub
+### Paso 1: Descargar el GitHub
 
-1. **Open your terminal** (Command Prompt on Windows, Terminal on Mac/Linux)
+1. **Abre tu terminal** (Command Prompt en Windows, Terminal en Mac/Linux)
 
-2. **Clone the repository:**
+2. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/oscarcv125/BanorteSmart.git
    ```
 
-3. **Navigate to the project folder:**
+3. **Navegar al folder del proyecto:**
    ```bash
    cd BanorteSmart
    ```
 
-### Step 2: Install Dependencies
+### Paso 2: Instalar Paquetes
 
-Install all required packages:
+Instalar los paquetes necesarios:
 ```bash
 npm install
 ```
 
-This will download all the libraries and tools needed to run the app.
+Esto descargara todas las librerias y herramientas necesarias para correr la app.
 
-### Step 3: Configure the API Key
+### Paso 3: Configurar la API Key
 
-1. **Create a `.env` file** in the project root:
+1. **Crear un archivo `.env`** :
    ```bash
-   # On Mac/Linux:
+   # En Mac/Linux:
    touch .env
 
-   # On Windows:
+   # En Windows:
    type nul > .env
    ```
 
-2. **Open `.env` and add your Google Gemini API key:**
+2. **Abrir `.env` y poner tu Google Gemini API key:**
    ```
    VITE_GEMINI_API_KEY=your_api_key_here
    ```
 
-   Replace `your_api_key_here` with your actual API key.
+   Reemplazar `your_api_key_here` con tu API key.
 
-### Step 4: Run the Development Server
+### Paso 4: Ejecución de la App
 
-Start the app locally:
+Iniciar la app localmente:
 ```bash
 npm run dev
 ```
 
-The app will open at: **http://localhost:5173/** (or another port if 5173 is busy)
+La app se va a abrir en: **http://localhost:5173/** (o en otro puerto si el 5173 está ocupado)
 
 ---
 
-##  Deployment Guide
 
-### Option 1: Deploy to Vercel (Recommended - Free & Easy)
-
-1. **Create a Vercel account** at [vercel.com](https://vercel.com)
-
-2. **Install Vercel CLI:**
-   ```bash
-   npm install -g vercel
-   ```
-
-3. **Build your project:**
-   ```bash
-   npm run build
-   ```
-
-4. **Deploy:**
-   ```bash
-   vercel
-   ```
-
-5. **Add environment variables** in Vercel dashboard:
-   - Go to your project settings
-   - Add `VITE_GEMINI_API_KEY` with your API key
-
-6. **Your app is live!** Vercel will provide a URL like `https://banorte-smart.vercel.app`
-
-
-##  Project Structure
+##  Estructura del proyecto
 
 ```
 banorte-app/
@@ -196,213 +184,44 @@ banorte-app/
 └── README.md                 # This file!
 ```
 
-### Key Files Explained
+### Archivos clave explicados
 
 #### `package.json`
-Lists all the libraries your app needs and defines commands like `npm run dev` and `npm run build`.
+Enumera todas las bibliotecas (librerías) que necesita tu aplicación y define comandos como 'npm run dev' y 'npm run build'.
 
 #### `src/main.tsx`
-The **entry point** - this is where your app starts running.
+El punto de entrada (entry point); aquí es donde tu aplicación comienza a ejecutarse.
 
 #### `src/App.tsx`
-The **main component** that controls which screen to show (Login, Dashboard, Servicios, or Chatbot).
+El componente principal que controla qué pantalla mostrar (Login, Dashboard, Servicios o Chatbot).
 
 #### `src/index.css`
-Contains the **Banorte design system**: colors, fonts, and global styles used throughout the app.
+Contiene el sistema de diseño de Banorte: colores, fuentes (tipografías) y estilos globales usados en toda la aplicación.
 
 #### `src/data/electricityData.ts`
-Mock data containing 4 weeks of electricity consumption information with costs, kWh usage, and dates.
+Datos de simulación (mock data) que contienen información del consumo de electricidad de 4 semanas con costos, uso de kWh y fechas.
 
 #### `.env`
-Stores **secret information** like API keys. This file is never uploaded to GitHub (protected by `.gitignore`).
+Almacena "información secreta" como las llaves de API (API keys). Este archivo nunca se sube a GitHub (está protegido por .gitignore).
+
 
 ---
 
-## 📚 Basic Terminology
 
-### What is HTML?
-**HTML (HyperText Markup Language)** is the structure of a webpage. Think of it like the skeleton of a house - it defines what elements exist (buttons, text, images, etc.).
+## Tecnologías empleadas
 
-### What is CSS?
-**CSS (Cascading Style Sheets)** is the styling of a webpage. It's like painting and decorating the house - it controls colors, sizes, positions, fonts, and how things look visually.
+- Frontend Framework: React 18
+- Lenguaje: TypeScript
+- Herramienta de construcción: Vite
+- Gráficas: Recharts
+- Integración de IA: Google Gemini Flash 2.5
+- Diseño: CSS3 with CSS Variables
+- Version Control: Git
 
-### What is TypeScript (.tsx files)?
-**TypeScript** is a programming language that adds "types" to JavaScript. It helps catch errors before running the code. `.tsx` files combine TypeScript with **JSX** (JavaScript XML), which lets you write HTML-like code inside JavaScript.
 
-### What is React?
-**React** is a JavaScript library for building user interfaces. It breaks your app into reusable "components" (like LEGO blocks) that can be combined to build complex apps.
 
-### What is Vite?
-**Vite** is a build tool that makes your development faster. It bundles all your code and assets into an optimized package for deployment.
 
-### What is an API?
-**API (Application Programming Interface)** is a way for different software to communicate. In our case, we use Google Gemini's API to send questions and receive AI-generated responses.
-
-### What is npm?
-**npm (Node Package Manager)** is a tool that helps you install and manage code libraries (packages) that other developers have created.
-
-### What is Git?
-**Git** is a version control system that tracks changes to your code over time, like "save points" in a video game.
-
-### What is GitHub?
-**GitHub** is a website that hosts Git repositories online, making it easy to share code and collaborate with others.
 
 ---
 
-## 🎤 Presentation Pitch
 
-### Elevator Pitch (30 seconds)
-
-"Imagine opening your Banorte app and instantly seeing exactly where your electricity money is going. **Banorte Smart** doesn't just show you numbers - it uses AI to detect consumption spikes, compare your usage week-to-week, and give you personalized recommendations to save money. With our AI chatbot Maya, you can ask 'What day did I spend the most?' and get instant, intelligent answers. It's your electricity consumption advisor, built right into your banking app."
-
----
-
-### Full Presentation Pitch (3-5 minutes)
-
-#### 🎯 The Problem
-
-Every month, Banorte customers receive their electricity bills and ask themselves:
-- "Why is my bill so high this month?"
-- "What caused this spike in consumption?"
-- "How can I reduce my electricity costs?"
-
-Currently, they have no easy way to:
-- Track daily consumption patterns
-- Identify specific days with unusual usage
-- Get actionable recommendations
-- Compare their usage over time
-
-#### 💡 Our Solution: Banorte Smart
-
-**Banorte Smart** transforms electricity bill management into an **intelligent, interactive experience**.
-
-#### Key Features:
-
-**1. Visual Consumption Analytics**
-- Interactive bar charts showing daily electricity costs
-- 4 weeks of historical data at your fingertips
-- Week-by-week comparison with automatic savings calculations
-- Instantly see if you saved money or spent more compared to last week
-
-**2. Intelligent Spike Detection**
-- Automatic detection of consumption anomalies
-- Highlights days when usage exceeds 2x the average
-- Visual alerts help users identify problem days
-
-**3. Maya - Your AI Energy Advisor**
-- Powered by Google's latest Gemini Flash 2.5 AI
-- Understands your complete consumption history
-- Answers natural language questions:
-  - "What day did I spend the most money on electricity?"
-  - "How much did I save this week?"
-  - "Give me recommendations to reduce my consumption"
-- Provides personalized, actionable energy-saving tips
-- Quick-access buttons for common questions
-
-**4. Flexible Payment Options**
-- Pay in full for immediate balance clearance
-- Split into 3 installments for better budget management
-- Defer payment to a later date
-- Custom amount payments (minimum $50 MXN)
-
-#### 🎨 Design Excellence
-
-- **Complete Banorte Design System** implementation
-- Banorte brand colors (#EB0029 red, official grays)
-- Gotham font family throughout
-- Mobile-first responsive design
-- Simulates actual phone app experience on desktop
-
-#### 🔧 Technical Innovation
-
-**Modern Technology Stack:**
-- **React + TypeScript** - Industry-standard, type-safe development
-- **Vite** - Lightning-fast build tool
-- **Recharts** - Professional data visualization
-- **Google Gemini Flash 2.5** - State-of-the-art AI
-
-**Security & Best Practices:**
-- Environment variables for API key security
-- Git version control
-- Modular, maintainable code architecture
-- Reusable component library
-
-#### 📊 Business Value
-
-**For Customers:**
-- Transparency and control over electricity spending
-- Actionable insights to reduce costs
-- Convenient payment management
-- Educational tool for energy awareness
-
-**For Banorte:**
-- Increased customer engagement with the banking app
-- Differentiation from competitors
-- Data-driven insights into customer consumption patterns
-- Opportunity for partnership with electricity providers
-- Foundation for expanding to other utilities (water, gas, internet)
-
-#### 🚀 Future Enhancements
-
-1. **Real-time integration** with CFE (Mexico's electricity company)
-2. **Push notifications** for spike alerts
-3. **Goals & challenges** - gamification for energy saving
-4. **Comparison with neighbors** - community benchmarking
-5. **Smart appliance recommendations** - suggest energy-efficient devices
-6. **Carbon footprint tracking** - environmental impact awareness
-7. **Predictive analytics** - forecast next month's bill
-
-#### 💰 Impact Metrics
-
-If a customer reduces consumption by just **10%** through our insights:
-- Average monthly bill: $1,500 MXN
-- **Savings: $150 MXN/month**
-- **Annual savings: $1,800 MXN**
-
-For Banorte with 1 million active users adopting this feature:
-- Total customer savings: **$1.8 billion MXN annually**
-- Increased app engagement
-- Enhanced customer loyalty
-
----
-
-### Call to Action
-
-**"Banorte Smart isn't just a feature - it's a commitment to empowering our customers with intelligence, transparency, and control over their finances. Let's make every peso count."**
-
----
-
-## 🛠️ Technology Stack
-
-- **Frontend Framework:** React 18
-- **Language:** TypeScript
-- **Build Tool:** Vite
-- **Charts:** Recharts
-- **AI Integration:** Google Gemini Flash 2.5
-- **Styling:** CSS3 with CSS Variables
-- **Version Control:** Git
-- **Hosting:** Vercel/Netlify ready
-
----
-
-## 📝 License
-
-This project was created as a proof of concept for Banorte's innovation initiatives.
-
----
-
-## 🙏 Acknowledgments
-
-- Banorte design team for brand guidelines
-- Google for Gemini AI API
-- React and Vite communities
-
----
-
-## 📞 Support
-
-For questions or issues, please open an issue on GitHub or contact the development team.
-
----
-
-**Built with ❤️ for Banorte customers**
