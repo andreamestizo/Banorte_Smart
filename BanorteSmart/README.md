@@ -1,10 +1,10 @@
-# 🏦 Banorte Smart - Intelligent Electricity Consumption Banking App
+# Banorte Smart - Implementación en la App Banorte para el Consumo Inteligente de Agua y Electricidad
 
 A modern mobile banking application that helps Banorte customers analyze their electricity consumption, receive AI-powered recommendations, and manage payments efficiently.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -17,32 +17,33 @@ A modern mobile banking application that helps Banorte customers analyze their e
 
 ---
 
-## 🎯 Overview
+## Overview
 
-**Banorte Smart** is an innovative banking application that integrates electricity consumption analysis with AI-powered insights. Users can track their weekly electricity usage, identify consumption spikes, receive personalized saving recommendations from Maya (our AI chatbot), and manage their electricity bill payments - all within the Banorte ecosystem.
+**Banorte Smart** is an innovative banking application that integrates electricity consumption analysis with AI-powered insights. Users can track their weekly electricity and water usage, identify consumption spikes, receive personalized saving recommendations from Maya (our AI chatbot), and manage their electricity and water bill payments - all within the Banorte ecosystem.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication
+###  Authentication
 - Secure login screen with Banorte branding
 - User-friendly interface
 
-### 🏠 Dashboard
+###  Dashboard
 - Quick access to all banking services
 - Maya AI chatbot integration
 - Menu grid with 6 core services
 
-### ⚡ Electricity Consumption Analysis
+###  Electricity and Water Consumption Analysis
 - **4 weeks of historical data** with date ranges
 - **Interactive bar charts** showing daily costs
 - **Week selector** to compare different periods
 - **Automatic spike detection** (flags consumption 2x above average)
 - **Savings comparison** vs. previous week
+- **
 - Visual consumption patterns
 
-### 🤖 Maya AI Chatbot
+###  Maya AI Chatbot
 - Powered by **Google Gemini Flash 2.5**
 - Analyzes your electricity consumption data
 - Answers questions like:
@@ -52,7 +53,7 @@ A modern mobile banking application that helps Banorte customers analyze their e
 - Provides personalized energy-saving tips
 - Quick question buttons for common queries
 
-### 💳 Payment Options
+###  Payment Options
 - **Pay in full** - Complete balance payment
 - **Pay in parts** - Split into 3 installments
 - **Defer payment** - Pay later option
@@ -60,7 +61,7 @@ A modern mobile banking application that helps Banorte customers analyze their e
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -122,7 +123,7 @@ The app will open at: **http://localhost:5173/** (or another port if 5173 is bus
 
 ---
 
-## 🌐 Deployment Guide
+##  Deployment Guide
 
 ### Option 1: Deploy to Vercel (Recommended - Free & Easy)
 
@@ -149,41 +150,8 @@ The app will open at: **http://localhost:5173/** (or another port if 5173 is bus
 
 6. **Your app is live!** Vercel will provide a URL like `https://banorte-smart.vercel.app`
 
-### Option 2: Deploy to Netlify
 
-1. **Create a Netlify account** at [netlify.com](https://netlify.com)
-
-2. **Build your project:**
-   ```bash
-   npm run build
-   ```
-
-3. **Install Netlify CLI:**
-   ```bash
-   npm install -g netlify-cli
-   ```
-
-4. **Deploy:**
-   ```bash
-   netlify deploy --prod
-   ```
-
-5. **Add environment variables** in Netlify dashboard
-
-### Option 3: Manual Deployment (Any Web Server)
-
-1. **Build the production version:**
-   ```bash
-   npm run build
-   ```
-
-2. **The `dist` folder** contains your complete app
-
-3. **Upload the `dist` folder** to any web hosting service (e.g., GitHub Pages, AWS S3, Firebase Hosting)
-
----
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 banorte-app/
